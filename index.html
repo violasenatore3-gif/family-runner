@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Family Runner - A fun endless runner game for the whole family">
+    <title>Family Runner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Landing Screen -->
+    <div id="landing-screen" class="screen active">
+        <div class="background-elements">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+        </div>
+        <div class="content-container">
+            <h1 class="game-title">🏃 Family Runner</h1>
+            <p class="game-description">Jump, run, and dodge obstacles with your family!</p>
+            <div class="dino-preview bounce">
+                <div class="dino-body"></div>
+            </div>
+            <button id="start-btn" class="primary-btn">Start Game</button>
+            <button id="leaderboard-btn" class="secondary-btn">🏆 Leaderboard</button>
+        </div>
+    </div>
+
+    <!-- Character Selection Screen -->
+    <div id="selection-screen" class="screen">
+        <div class="content-container">
+            <h2 class="screen-title">Choose Your Runner</h2>
+            <div id="character-grid" class="character-grid">
+                <!-- Characters will be dynamically loaded here -->
+            </div>
+            <div id="character-preview" class="character-preview hidden">
+                <div class="preview-dino">
+                    <div class="preview-face-container">
+                        <img id="preview-face" src="" alt="Selected character">
+                    </div>
+                    <div class="preview-body"></div>
+                </div>
+                <p id="preview-name" class="preview-name"></p>
+            </div>
+            <button id="play-btn" class="primary-btn" disabled>Play!</button>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+        <div class="game-ui">
+            <div class="score-display">
+                <span class="score-label">Score:</span>
+                <span id="score">0</span>
+            </div>
+        </div>
+        <canvas id="game-canvas"></canvas>
+        <div id="start-prompt" class="start-prompt">
+            <p>Press SPACE or TAP to jump!</p>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameover-screen" class="screen">
+        <div class="content-container">
+            <h2 class="screen-title game-over-title">Game Over!</h2>
+            <div class="final-score-container">
+                <p class="final-score-label">Your Score</p>
+                <p id="final-score" class="final-score">0</p>
+            </div>
+            <div class="gameover-character">
+                <div class="gameover-face-container">
+                    <img id="gameover-face" src="" alt="Your character">
+                </div>
+                <div class="gameover-body"></div>
+            </div>
+            <div class="button-group">
+                <button id="play-again-btn" class="primary-btn">Play Again</button>
+                <button id="change-character-btn" class="secondary-btn">Change Character</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaderboard Screen -->
+    <div id="leaderboard-screen" class="screen">
+        <div class="content-container">
+            <h2 class="screen-title">🏆 Family Leaderboard</h2>
+            <div id="leaderboard-list" class="leaderboard-list">
+                <!-- Leaderboard entries will be dynamically loaded here -->
+            </div>
+            <button id="back-to-menu-btn" class="primary-btn">Back to Menu</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
