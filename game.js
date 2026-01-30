@@ -19,7 +19,8 @@ const familyMembers = [
     { id: 'ari', name: 'Ari', image: 'assets/ari.png', gender: 'female' },
     { id: 'mattia', name: 'Mattia', image: 'assets/mattia.png', gender: 'male' },
     { id: 'saydeh', name: 'Saydeh', image: 'assets/saydeh.png', gender: 'female' },
-    { id: 'emma', name: 'Emma', image: 'assets/emma.png', gender: 'female' }
+    { id: 'emma', name: 'Emma', image: 'assets/emma.png', gender: 'female' },
+    { id: 'nadia', name: 'Nadia', image: 'assets/nadia.png', gender: 'female' }
 ];
 
 // ===== DOM Elements =====
