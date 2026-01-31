@@ -377,6 +377,9 @@ function startGame() {
     dino = new Dino();
     resizeCanvas();
 
+    // Scroll to top to ensure game view is properly positioned
+    window.scrollTo(0, 0);
+
     if (animationId) {
         cancelAnimationFrame(animationId);
     }

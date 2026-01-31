@@ -385,6 +385,10 @@ body {
 /* ===== Game Screen ===== */
 #game-screen {
     background: linear-gradient(to bottom, var(--color-sky) 0%, var(--color-sky-light) 100%);
+    overflow: hidden;
+    /* Prevent scrolling on game screen */
+    padding: 0;
+    /* Remove padding that creates scroll space */
 }
 
 .game-ui {
