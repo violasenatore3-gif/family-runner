@@ -71,12 +71,12 @@ class Dino {
         this.width = 60;
         this.height = 80;
         this.x = 100;
-        this.y = canvasHeight - 150 - this.height;
+        this.y = canvasHeight - 50 - this.height;
         this.velocityY = 0;
         this.gravity = 0.8;
         this.jumpPower = -20;
         this.isJumping = false;
-        this.groundY = canvasHeight - 150 - this.height;
+        this.groundY = canvasHeight - 50 - this.height;
         this.faceImage = new Image();
         if (selectedCharacter) {
             this.faceImage.src = selectedCharacter.image;
@@ -198,8 +198,8 @@ class Obstacle {
         this.height = type === 'cactus' ? 50 : 30;
         this.x = canvasWidth;
         this.y = type === 'cactus'
-            ? canvasHeight - 150 - this.height
-            : canvasHeight - 150 - 70;
+            ? canvasHeight - 50 - this.height
+            : canvasHeight - 50 - 70;
         this.speed = 5;
     }
 
@@ -277,14 +277,14 @@ function gameLoop() {
 
     // Draw ground
     ctx.fillStyle = '#F4E4C1';
-    ctx.fillRect(0, canvasHeight - 150, canvasWidth, 150);
+    ctx.fillRect(0, canvasHeight - 50, canvasWidth, 50);
 
     // Draw ground line
     ctx.strokeStyle = '#D4C4A1';
     ctx.lineWidth = 3;
     ctx.beginPath();
-    ctx.moveTo(0, canvasHeight - 150);
-    ctx.lineTo(canvasWidth, canvasHeight - 150);
+    ctx.moveTo(0, canvasHeight - 50);
+    ctx.lineTo(canvasWidth, canvasHeight - 50);
     ctx.stroke();
 
     // Always draw dino
