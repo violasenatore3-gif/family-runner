@@ -51,8 +51,10 @@ body {
     font-family: var(--font-body);
     background: linear-gradient(to bottom, var(--color-sky-light) 0%, var(--color-sky) 100%);
     color: var(--color-text-dark);
-    overflow: auto;
-    min-height: 100vh;
+    overflow: hidden;
+    /* Disable all page scrolling */
+    height: 100vh;
+    /* Fixed viewport height */
     width: 100vw;
 }
 
@@ -62,7 +64,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    /* Fixed height instead of min-height */
     display: flex;
     align-items: flex-start;
     justify-content: center;
